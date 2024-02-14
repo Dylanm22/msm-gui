@@ -5,9 +5,33 @@
 <a href="/directors">
   Go back
 </a>
+<div>
 
+<a href="/delete_director/<%= @the_director.id %>">Delete director</a>
 <hr>
 
+<form action="/update_director_record/<%=@the_director.id%>" method="post">
+  <div>
+    <label for="title_field">Name</label>
+    <input id="title_field" type="text" name="direc_name" value="<%=@the_director.name%>">
+  </div>
+  <div>
+    <label for="year_field">Dob</label>
+    <input id="year_field" type="text" name="direc_dob" value="<%=@the_director.dob%>">
+  </div>
+  <div>
+    <label for="duration_field">Bio</label>
+    <input id="duration_field" type="text" name="direc_bio" value="<%=@the_director.bio%>">
+  </div>
+  <div>
+    <label for="description_field">Image</label>
+    <input id="description_field" type="text" name="direc_image" value="<%=@the_director.image%>">
+  </div>
+  <button>Update director</button>
+  </form>
+
+
+<hr>
 <dl>
   <dt>
     Name
